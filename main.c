@@ -14,6 +14,10 @@ int main()
     SetTargetFPS(framesPerSecond);
 
     tDifficulty currentDifficulty;
+
+    bool mlgFlag = false;
+    int mlgRandom;
+
     int score;
     int seconds;
     int actualCorrectAnswer = 0;
@@ -73,6 +77,9 @@ int main()
     Sound mainMenuMusic = LoadSound("resources/sounds/mainMenuMusic.mp3");
     Sound point = LoadSound("resources/sounds/point.mp3");
     Sound click = LoadSound("resources/sounds/click.mp3");
+    Sound damnson = LoadSound("resources/sounds/damnson.mp3");
+    Sound trapaholics = LoadSound("resources/sounds/trapaholics.mp3");
+    Sound wmle = LoadSound("resources/sounds/wmle.wav");
     // Imagenes utilizadas
     Texture2D volumeOn = LoadTexture("resources/images/volumeOn.png");
     Texture2D volumeOff = LoadTexture("resources/images/volumeOff.png");
@@ -88,13 +95,31 @@ int main()
     //  Inicio de game loop
     while (!WindowShouldClose())
     {
+        if (score != 0 && mlgFlag == false && score % 5 == 0.0000)
+        {
+            mlgRandom = GetRandomValue(1, 3);
+            switch (mlgRandom)
+            {
+            case 1:
+                PlaySound(wmle);
+                break;
+            case 2:
+                PlaySound(damnson);
+                break;
+            case 3:
+                PlaySound(trapaholics);
+                break;
+            }
+            mlgFlag = true;
+        }
+        if (mlgFlag == true && score % 5 != 0.000)
+        {
+            mlgFlag = false;
+        }
+
         BeginDrawing();
         ClearBackground(RAYWHITE);
 
-        /*
-        DrawText(TextFormat("%2f", cronometer / framesPerSecond), 100, 100, 100, BLACK);
-        cronometer++;
-        */
         Vector2 mousePoint = GetMousePosition();
 
         switch (currentScreen)
@@ -133,7 +158,7 @@ int main()
                 //
                 else if (CheckCollisionPointRec(mousePoint, githubButtonPossitionR) && showGithubButton)
                 {
-                    OpenURL("https://www.youtube.com/");
+                    OpenURL("https://github.com/PedroxionX/CrazyLearnQuest");
                     PlaySound(click);
                 }
                 else if (CheckCollisionPointRec(mousePoint, volumeButtonPossitionR))
@@ -559,10 +584,6 @@ int main()
                             randomValue3 = GetRandomValue(5, quantityHistQuestions);
                         }
                     }
-                    score++;
-                    drawHistGameScreen(randomValue, randomValue2, randomValue3, score, correctOption, optionOne, optionTwo, optionThree, remainingTime, framesPerSecond);
-
-                    //
                     drawHistGameScreen(randomValue, randomValue2, randomValue3, score, correctOption, optionOne, optionTwo, optionThree, remainingTime, framesPerSecond);
                 }
             }
