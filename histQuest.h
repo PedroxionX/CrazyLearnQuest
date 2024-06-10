@@ -6,7 +6,7 @@
 #include <string.h>
 //
 #define quantityHistQuestions 19
-//
+// Listas
 char questionList[][200] = {
     "¿En qué año se descubrió América?",
     "¿En qué año se firmó la Declaración de Independencia de EUA?",
@@ -58,7 +58,7 @@ typedef struct sHistQuestion
     char question[200];
     char answer[30];
 } tHistQuestion;
-//
+// Prototipos
 void drawHistMainMenu(Rectangle easyButton, Rectangle helpButton, Rectangle mainMenuButton, int maxScore);
 void drawHistGameScreen(int randomValue, int randomValue2, int randomValue3, int score, int correctOption, Rectangle optionOne, Rectangle optionTwo, Rectangle optionThree, float remainingTime, int framesPerSecond);
 void drawHistGameOverScreen(int score, tHistQuestion currentHistAnswer);
@@ -66,7 +66,7 @@ void drawHistInstructions(Rectangle exitInstructionsButton);
 tHistQuestion generateHistProblem(int randomValue);
 tHistSaveData loadHistData(const char *filename);
 void saveHistData(const char *filename, tHistSaveData data);
-
+//
 void drawHistMainMenu(Rectangle easyButton, Rectangle helpButton, Rectangle mainMenuButton, int maxScore)
 {
     DrawText("HistoryQuest", 265, 30, 40, DARKGRAY);

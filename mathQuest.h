@@ -31,7 +31,6 @@ void drawMathGameOverScreen(int score, int answer);
 void drawMathInstructions(Rectangle exitInstructionsButton);
 tMathSaveData loadMathData(const char *filename);
 void saveMathData(const char *filename, tMathSaveData data);
-
 // Desarrollo de funciones
 tProblem generateMathProblem(tDifficulty difficulty)
 {

@@ -6,7 +6,7 @@
 #include <string.h>
 //
 #define quantityCountrys 85
-//
+// Listas
 char countryList[][30] = {
     "Mexico", "Ecuador", "Noruega", "Holanda", "España", "Francia", "Alemania", "Italia", "Japón", "Brasil",
     "Argentina", "Canadá", "Australia", "China", "India", "Rusia", "Sudáfrica", "Reino Unido", "Egipto", "Turquía",
@@ -37,7 +37,7 @@ typedef struct sGeoSaveData
 {
     int maxScore;
 } tGeoSaveData;
-//
+// Prototipos
 void drawGeoMainMenu(Rectangle easyButton, Rectangle helpButton, Rectangle mainMenuButton, int maxScore);
 void drawGeoGameScreen(int randomValue, int randomValue2, int randomValue3, int score, int correctOption, Rectangle optionOne, Rectangle optionTwo, Rectangle optionThree, float remainingTime, int framesPerSecond);
 void drawGeoGameOverScreen(int score, tGeoCapital currentGeoCapital);

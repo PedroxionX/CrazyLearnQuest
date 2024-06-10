@@ -93,6 +93,7 @@ int main()
     //
     PlaySound(mainMenuMusic);
     //  Inicio de game loop
+
     while (!WindowShouldClose())
     {
         if (score != 0 && mlgFlag == false && score % 5 == 0.0000)
@@ -766,6 +767,7 @@ int main()
         EndDrawing();
         ClearBackground(RAYWHITE);
     }
+
     CloseWindow();
     CloseAudioDevice();
     return 0;
