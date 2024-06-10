@@ -87,9 +87,9 @@ int main()
     Texture2D brokenHeart = LoadTexture("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/resources/images/brokenHeart.png");
     Texture2D github = LoadTexture("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/resources/images/github.png");
     // Partidas guardadas
-    tMathSaveData saveMathDataStruct = loadMathData("mathQuestData");
-    tGeoSaveData saveGeoDataStruct = loadGeoData("geoQuestData");
-    tHistSaveData saveHistDataStruct = loadHistData("histQuestData");
+    tMathSaveData saveMathDataStruct = loadMathData("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/mathQuestData");
+    tGeoSaveData saveGeoDataStruct = loadGeoData("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/geoQuestData");
+    tHistSaveData saveHistDataStruct = loadHistData("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/histQuestData");
     //
     PlaySound(mainMenuMusic);
     //  Inicio de game loop
