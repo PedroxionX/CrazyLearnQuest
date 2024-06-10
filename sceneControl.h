@@ -146,6 +146,7 @@ tGameScreen drawRaylibScene(tGameScreen currentScreen, Sound point)
     else if (state == 4)
     {
         DrawText("[R] COMENZAR A JUGAR", 270, 200, 20, GRAY);
+        DrawText("CrazyLearnQuest", 175, 500, 50, GRAY);
     }
     return RAYLIB_SCENE;
     //

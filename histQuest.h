@@ -5,7 +5,7 @@
 #include <time.h>
 #include <string.h>
 //
-#define quantityHistQuestions 19
+#define quantityHistQuestions 18
 // Listas
 char questionList[][200] = {
     "¿En qué año se descubrió América?",

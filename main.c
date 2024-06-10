@@ -36,7 +36,7 @@ int main()
     bool showGithubButton = true;
 
     tGameScreen currentScreen = RAYLIB_SCENE;
-    //
+    // currentScreen = MAIN_MENU;
     Vector2 volumeButtonPossition = {650, 500};
     Rectangle volumeButtonPossitionR = {650, 500, 100, 100};
     //
@@ -72,20 +72,20 @@ int main()
     tGeoCapital currentGeoCapital;
     tHistQuestion currentHistAnswer;
     // Sonidos utilizados
-    Sound loseSound = LoadSound("resources/sounds/loseSound.mp3");
-    Sound hurt = LoadSound("resources/sounds/hurt.mp3");
-    Sound mainMenuMusic = LoadSound("resources/sounds/mainMenuMusic.mp3");
-    Sound point = LoadSound("resources/sounds/point.mp3");
-    Sound click = LoadSound("resources/sounds/click.mp3");
-    Sound damnson = LoadSound("resources/sounds/damnson.mp3");
-    Sound trapaholics = LoadSound("resources/sounds/trapaholics.mp3");
-    Sound wmle = LoadSound("resources/sounds/wmle.wav");
+    Sound loseSound = LoadSound("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/resources/sounds/loseSound.mp3");
+    Sound hurt = LoadSound("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/resources/sounds/hurt.mp3");
+    Sound mainMenuMusic = LoadSound("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/resources/sounds/mainMenuMusic.mp3");
+    Sound point = LoadSound("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/resources/sounds/point.mp3");
+    Sound click = LoadSound("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/resources/sounds/click.mp3");
+    Sound damnson = LoadSound("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/resources/sounds/damnson.mp3");
+    Sound trapaholics = LoadSound("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/resources/sounds/trapaholics.mp3");
+    Sound wmle = LoadSound("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/resources/sounds/wmle.wav");
     // Imagenes utilizadas
-    Texture2D volumeOn = LoadTexture("resources/images/volumeOn.png");
-    Texture2D volumeOff = LoadTexture("resources/images/volumeOff.png");
-    Texture2D heart = LoadTexture("resources/images/heart.png");
-    Texture2D brokenHeart = LoadTexture("resources/images/brokenHeart.png");
-    Texture2D github = LoadTexture("resources/images/github.png");
+    Texture2D volumeOn = LoadTexture("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/resources/images/volumeOn.png");
+    Texture2D volumeOff = LoadTexture("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/resources/images/volumeOff.png");
+    Texture2D heart = LoadTexture("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/resources/images/heart.png");
+    Texture2D brokenHeart = LoadTexture("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/resources/images/brokenHeart.png");
+    Texture2D github = LoadTexture("/Users/pedrocbcmp/Desktop/Tercer semestre/Programacion estructurada/CrazyLearnQuest/resources/images/github.png");
     // Partidas guardadas
     tMathSaveData saveMathDataStruct = loadMathData("mathQuestData");
     tGeoSaveData saveGeoDataStruct = loadGeoData("geoQuestData");
@@ -364,14 +364,17 @@ int main()
                         randomValue2 = randomValue - 1;
                         if (randomValue2 <= 0)
                         {
-                            randomValue2 = GetRandomValue(2, quantityCountrys);
+                            randomValue2 = GetRandomValue(5, quantityCountrys);
                         }
                     }
                     if (randomValue3 == randomValue || randomValue3 == randomValue2)
                     {
                         randomValue3 = randomValue2 - 1;
+                        if (randomValue3 <= 0)
+                        {
+                            randomValue3 = GetRandomValue(5, quantityCountrys);
+                        }
                     }
-                    //
                 }
             }
             break;
@@ -407,12 +410,16 @@ int main()
                             randomValue2 = randomValue - 1;
                             if (randomValue2 <= 0)
                             {
-                                randomValue2 = GetRandomValue(2, quantityCountrys);
+                                randomValue2 = GetRandomValue(5, quantityCountrys);
                             }
                         }
                         if (randomValue3 == randomValue || randomValue3 == randomValue2)
                         {
                             randomValue3 = randomValue2 - 1;
+                            if (randomValue3 <= 0)
+                            {
+                                randomValue3 = GetRandomValue(5, quantityCountrys);
+                            }
                         }
                         score++;
                         drawGeoGameScreen(randomValue, randomValue2, randomValue3, score, correctOption, optionOne, optionTwo, optionThree, remainingTime, framesPerSecond);
@@ -448,12 +455,16 @@ int main()
                             randomValue2 = randomValue - 1;
                             if (randomValue2 <= 0)
                             {
-                                randomValue2 = GetRandomValue(2, quantityCountrys);
+                                randomValue2 = GetRandomValue(5, quantityCountrys);
                             }
                         }
                         if (randomValue3 == randomValue || randomValue3 == randomValue2)
                         {
                             randomValue3 = randomValue2 - 1;
+                            if (randomValue3 <= 0)
+                            {
+                                randomValue3 = GetRandomValue(5, quantityCountrys);
+                            }
                         }
                         score++;
                         drawGeoGameScreen(randomValue, randomValue2, randomValue3, score, correctOption, optionOne, optionTwo, optionThree, remainingTime, framesPerSecond);
@@ -489,12 +500,16 @@ int main()
                             randomValue2 = randomValue - 1;
                             if (randomValue2 <= 0)
                             {
-                                randomValue2 = GetRandomValue(2, quantityCountrys);
+                                randomValue2 = GetRandomValue(5, quantityCountrys);
                             }
                         }
                         if (randomValue3 == randomValue || randomValue3 == randomValue2)
                         {
                             randomValue3 = randomValue2 - 1;
+                            if (randomValue3 <= 0)
+                            {
+                                randomValue3 = GetRandomValue(5, quantityCountrys);
+                            }
                         }
                         score++;
                         drawGeoGameScreen(randomValue, randomValue2, randomValue3, score, correctOption, optionOne, optionTwo, optionThree, remainingTime, framesPerSecond);
@@ -567,7 +582,7 @@ int main()
                     randomValue2 = GetRandomValue(0, quantityHistQuestions);
                     randomValue3 = GetRandomValue(0, quantityHistQuestions);
                     correctOption = GetRandomValue(1, 3);
-                    currentHistAnswer = generateHistProblem(randomValue,"questions.txt");
+                    currentHistAnswer = generateHistProblem(randomValue, "questions.txt");
                     // Logica para que verificar que no se repiten
                     if (randomValue == randomValue2)
                     {
@@ -615,7 +630,7 @@ int main()
                         randomValue2 = GetRandomValue(0, quantityHistQuestions);
                         randomValue3 = GetRandomValue(0, quantityHistQuestions);
                         correctOption = GetRandomValue(1, 3);
-                        currentHistAnswer = generateHistProblem(randomValue,"questions.txt");
+                        currentHistAnswer = generateHistProblem(randomValue, "questions.txt");
                         // Logica para que verificar que no se repiten
                         if (randomValue == randomValue2)
                         {
@@ -662,7 +677,7 @@ int main()
                         randomValue2 = GetRandomValue(0, quantityHistQuestions);
                         randomValue3 = GetRandomValue(0, quantityHistQuestions);
                         correctOption = GetRandomValue(1, 3);
-                        currentHistAnswer = generateHistProblem(randomValue,"questions.txt");
+                        currentHistAnswer = generateHistProblem(randomValue, "questions.txt");
                         // Logica para que verificar que no se repiten
                         if (randomValue == randomValue2)
                         {
@@ -709,7 +724,7 @@ int main()
                         randomValue2 = GetRandomValue(0, quantityHistQuestions);
                         randomValue3 = GetRandomValue(0, quantityHistQuestions);
                         correctOption = GetRandomValue(1, 3);
-                        currentHistAnswer = generateHistProblem(randomValue,"questions.txt");
+                        currentHistAnswer = generateHistProblem(randomValue, "questions.txt");
                         // Logica para que verificar que no se repiten
                         if (randomValue == randomValue2)
                         {
