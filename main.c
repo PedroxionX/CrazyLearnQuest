@@ -567,7 +567,7 @@ int main()
                     randomValue2 = GetRandomValue(0, quantityHistQuestions);
                     randomValue3 = GetRandomValue(0, quantityHistQuestions);
                     correctOption = GetRandomValue(1, 3);
-                    currentHistAnswer = generateHistProblem(randomValue);
+                    currentHistAnswer = generateHistProblem(randomValue,"questions.txt");
                     // Logica para que verificar que no se repiten
                     if (randomValue == randomValue2)
                     {
@@ -615,7 +615,7 @@ int main()
                         randomValue2 = GetRandomValue(0, quantityHistQuestions);
                         randomValue3 = GetRandomValue(0, quantityHistQuestions);
                         correctOption = GetRandomValue(1, 3);
-                        currentHistAnswer = generateHistProblem(randomValue);
+                        currentHistAnswer = generateHistProblem(randomValue,"questions.txt");
                         // Logica para que verificar que no se repiten
                         if (randomValue == randomValue2)
                         {
@@ -662,7 +662,7 @@ int main()
                         randomValue2 = GetRandomValue(0, quantityHistQuestions);
                         randomValue3 = GetRandomValue(0, quantityHistQuestions);
                         correctOption = GetRandomValue(1, 3);
-                        currentHistAnswer = generateHistProblem(randomValue);
+                        currentHistAnswer = generateHistProblem(randomValue,"questions.txt");
                         // Logica para que verificar que no se repiten
                         if (randomValue == randomValue2)
                         {
@@ -709,7 +709,7 @@ int main()
                         randomValue2 = GetRandomValue(0, quantityHistQuestions);
                         randomValue3 = GetRandomValue(0, quantityHistQuestions);
                         correctOption = GetRandomValue(1, 3);
-                        currentHistAnswer = generateHistProblem(randomValue);
+                        currentHistAnswer = generateHistProblem(randomValue,"questions.txt");
                         // Logica para que verificar que no se repiten
                         if (randomValue == randomValue2)
                         {

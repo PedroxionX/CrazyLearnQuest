@@ -63,7 +63,7 @@ void drawHistMainMenu(Rectangle easyButton, Rectangle helpButton, Rectangle main
 void drawHistGameScreen(int randomValue, int randomValue2, int randomValue3, int score, int correctOption, Rectangle optionOne, Rectangle optionTwo, Rectangle optionThree, float remainingTime, int framesPerSecond);
 void drawHistGameOverScreen(int score, tHistQuestion currentHistAnswer);
 void drawHistInstructions(Rectangle exitInstructionsButton);
-tHistQuestion generateHistProblem(int randomValue);
+tHistQuestion generateHistProblem(int randomValue, const char *filename);
 tHistSaveData loadHistData(const char *filename);
 void saveHistData(const char *filename, tHistSaveData data);
 //
@@ -142,13 +142,45 @@ void drawHistInstructions(Rectangle exitInstructionsButton)
     DrawRectangleRec(exitInstructionsButton, LIGHTGRAY);
     DrawText("Volver al menu", exitInstructionsButton.x + 25, exitInstructionsButton.y + 14, 20, DARKGRAY);
 }
-tHistQuestion generateHistProblem(int randomValue)
+tHistQuestion generateHistProblem(int randomValue, const char *filename)
 {
     tHistQuestion temp;
+    FILE *file = fopen(filename, "r");
+    if (file == NULL)
+    {
+        perror("No se pudo abrir el archivo");
+        exit(EXIT_FAILURE);
+    }
 
-    strcpy(temp.question, questionList[randomValue]);
-    strcpy(temp.answer, answerList[randomValue]);
+    char line[512];
+    int currentLine = 0;
+    while (fgets(line, sizeof(line), file))
+    {
+        if (currentLine == randomValue)
+        {
+            // Dividir la línea en pregunta y respuesta
+            char *token = strtok(line, ";");
+            if (token != NULL)
+            {
+                strcpy(temp.question, token);
+                token = strtok(NULL, ";");
+                if (token != NULL)
+                {
+                    strcpy(temp.answer, token);
+                    // Eliminar el carácter de nueva línea al final de la respuesta
+                    size_t len = strlen(temp.answer);
+                    if (len > 0 && temp.answer[len - 1] == '\n')
+                    {
+                        temp.answer[len - 1] = '\0';
+                    }
+                }
+            }
+            break;
+        }
+        currentLine++;
+    }
 
+    fclose(file);
     return temp;
 }
 tHistSaveData loadHistData(const char *filename)

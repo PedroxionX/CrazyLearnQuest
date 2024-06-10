@@ -1,0 +1,19 @@
+¿En qué año se descubrió América?;1492
+¿En qué año se firmó la Declaración de Independencia de EUA?;1776
+¿En qué año comenzó la Primera Guerra Mundial?;1914
+¿En qué año terminó la Segunda Guerra Mundial y se fundo la ONU?;1945
+¿En qué año se construyó el Muro de Berlín?;1961
+¿En qué año se cayó el Muro de Berlín?;1989
+¿En qué año fue la Revolución Francesa?;1789
+¿En qué año llegó el hombre a la Luna?;1969
+¿En qué año comenzó la Guerra Civil Española?;1936
+¿En qué año terminó la Guerra Civil Española?;1939
+¿En qué año ocurrió la Revolución Rusa?;1917
+¿En qué año comenzó la Guerra de Independencia de México?;1810
+¿En qué año terminó la Guerra de Independencia de México?;1821
+¿En qué año fue el ataque a Pearl Harbor?;1941
+¿En qué año comenzó la Revolución Industrial?;1760
+¿En qué año se firmó el Tratado de Versalles?;1919
+¿En qué año ocurrió el Gran Incendio de Londres?;1666
+¿En qué año cayó Constantinopla?;1453
+¿En qué año fue la batalla de Waterloo?;1815
