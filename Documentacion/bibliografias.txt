@@ -1,0 +1,7 @@
+[1] https://www.udemy.com/course/cpp-fundamentals/?couponCode=ST19MT60324
+[2] https://www.youtube.com/@programmingwithnick
+[3] https://www.youtube.com/@goldenbergdev
+[4] https://www.youtube.com/@gamedevtutorials2935
+[5] https://pixabay.com/
+[6] https://www.raylib.com/examples.html
+[7] https://www.raylib.com/cheatsheet/cheatsheet.html
